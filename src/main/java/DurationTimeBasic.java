@@ -3,7 +3,7 @@ public class DurationTimeBasic {
     public double endTime;
 
     public double getDuration() {
-        return startTime - endTime;
+        return endTime - startTime;
     }
 
     public void ResetTime() {
