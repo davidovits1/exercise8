@@ -12,7 +12,6 @@ public class MainApp {
 
     public static void main(String[] args) {
         // TODO: Change this line to initialize an injected AlgorithmRunner
-
         AlgorithmRunner algorithmRunner = container.select(AlgorithmRunner.class).get();
         algorithmRunner.runAlgorithms();
     }
