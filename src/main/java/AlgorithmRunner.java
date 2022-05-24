@@ -5,23 +5,29 @@ import java.util.Random;
 // TODO: Add dependency injection and annotations to this file
 public class AlgorithmRunner {
     @Inject
-    @Named("SortingAlgorithmHigh") SortingAlgorithm<Integer> quadraticAlgorithm;
+    @Named("SortingAlgorithmHigh")
+    SortingAlgorithm<Integer> quadraticAlgorithm;
 
     @Inject
-    @Named("SortingAlgorithmLow") SortingAlgorithm<Integer> nlognAlgorithm;
+    @Named("SortingAlgorithmLow")
+    SortingAlgorithm<Integer> nlognAlgorithm;
 
     @Inject
-    @Named("RandomSortingAlgorithm") SortingAlgorithm<Integer> randomAlgorithm1;
+    @Named("RandomSortingAlgorithm")
+    SortingAlgorithm<Integer> randomAlgorithm1;
 
     @Inject
-    @Named("RandomSortingAlgorithm") SortingAlgorithm<Integer> randomAlgorithm2;
+    @Named("RandomSortingAlgorithm")
+    SortingAlgorithm<Integer> randomAlgorithm2;
 
     //sw
     @Inject
+    @Sweet
     int numberOfElements;
-    public void runAlgorithms(){
+
+    public void runAlgorithms() {
         Random rand = new Random();
-        Integer[] ints = rand.ints(1,Integer.MAX_VALUE)
+        Integer[] ints = rand.ints(1, Integer.MAX_VALUE)
                 .distinct()
                 .limit(numberOfElements)
                 .boxed()

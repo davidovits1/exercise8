@@ -1,7 +1,8 @@
 public class MergeSort implements SortingAlgorithm {
-    public void sort(Comparable[] array){
+    public void sort(Comparable[] array) {
         mergeSort(array, array.length);
     }
+
     public static void mergeSort(Comparable[] a, int n) {
         if (n < 2) {
             return;
@@ -27,10 +28,9 @@ public class MergeSort implements SortingAlgorithm {
 
         int i = 0, j = 0, k = 0;
         while (i < left && j < right) {
-            if (l[i].compareTo(r[j])<=0) {
+            if (l[i].compareTo(r[j]) <= 0) {
                 a[k++] = l[i++];
-            }
-            else {
+            } else {
                 a[k++] = r[j++];
             }
         }

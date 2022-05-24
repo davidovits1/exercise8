@@ -5,7 +5,6 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 
-import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,7 +30,6 @@ public class AlgorithmRunnerTime {
     @Pointcut("execution(* sort*(..))")
     private void selectAllSort() {
     }
-
 
     @Before("selectAllSort()")
     public void beforeRunningTime() {

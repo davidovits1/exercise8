@@ -5,13 +5,10 @@ import javax.enterprise.inject.Produces;
 import javax.inject.Named;
 import java.util.Random;
 
-// TODO: Add java classes (in separate files for annotations and aspects)
-
 public class MainApp {
     private static WeldContainer container = new Weld().initialize();
 
     public static void main(String[] args) {
-        // TODO: Change this line to initialize an injected AlgorithmRunner
         AlgorithmRunner algorithmRunner = container.select(AlgorithmRunner.class).get();
         algorithmRunner.runAlgorithms();
     }
@@ -47,7 +44,7 @@ public class MainApp {
     }
 
     @Produces
-    public Integer GetNumberOfElements() {
+    public @Sweet Integer GetNumberOfElements() {
         return 10000;
     }
 }

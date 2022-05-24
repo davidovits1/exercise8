@@ -6,5 +6,7 @@ public class DurationTimeBasic {
         return startTime - endTime;
     }
 
-    public void ResetTime() { startTime = endTime = 0; }
+    public void ResetTime() {
+        startTime = endTime = 0;
+    }
 }
