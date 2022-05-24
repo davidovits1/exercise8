@@ -1,5 +1,4 @@
 public class BubbleSort implements SortingAlgorithm {
-    @Loggable
     public void sort(Comparable[] array) {
         int n = array.length;
         Comparable temp;
