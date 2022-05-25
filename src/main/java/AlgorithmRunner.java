@@ -2,8 +2,8 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import java.util.Random;
 
-// TODO: Add dependency injection and annotations to this file
 public class AlgorithmRunner {
+    // Injects the instances by dependency injection with named which tells which Products to contact.
     @Inject
     @Named("SortingAlgorithmHigh")
     SortingAlgorithm<Integer> quadraticAlgorithm;
@@ -20,7 +20,6 @@ public class AlgorithmRunner {
     @Named("RandomSortingAlgorithm")
     SortingAlgorithm<Integer> randomAlgorithm2;
 
-    //sw
     @Inject
     @Sweet
     int numberOfElements;

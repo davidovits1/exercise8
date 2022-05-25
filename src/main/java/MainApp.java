@@ -13,6 +13,7 @@ public class MainApp {
         algorithmRunner.runAlgorithms();
     }
 
+    // Produces for RandomSortingAlgorithm.
     @Produces
     public @Named("RandomSortingAlgorithm") SortingAlgorithm<Integer> makeRandomSortingAlgorithm() {
         Random random = new Random(System.currentTimeMillis());
@@ -33,16 +34,19 @@ public class MainApp {
         return sortAlg;
     }
 
+    // Produces for BubbleSort.
     @Produces
     public @Named("SortingAlgorithmHigh") SortingAlgorithm<Integer> QuickSortGeneratorHigh() {
         return container.select(BubbleSort.class).get();
     }
 
+    // Produces for QuickSort.
     @Produces
     public @Named("SortingAlgorithmLow") SortingAlgorithm<Integer> QuickSortGeneratorLow() {
         return container.select(QuickSort.class).get();
     }
 
+    // Produces for NumberOfElements.
     @Produces
     public @Sweet Integer GetNumberOfElements() {
         return 10000;
